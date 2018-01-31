@@ -15,7 +15,7 @@ function(input, output, session) {
   #Volatility
   output$vol = renderDygraph({
     dygraph(SPVxts, group = 'Main') %>%
-      dyOptions(fillGraph = TRUE, maxNumberWidth = 30)#, labelsKMB = TRUE)
+      dyOptions(fillGraph = TRUE, maxNumberWidth = 30, labelsKMB = TRUE)
   })
 
   #Date display
