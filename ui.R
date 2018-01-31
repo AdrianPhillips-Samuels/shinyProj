@@ -63,12 +63,22 @@ titlePanel(h1("S&P 500")),
   br()
     ),
   tabPanel("Backtesting",
+           numericInput("hold", "Holding Period(Days)",min = 1, max = 30, value = 5),
+           numericInput('transaction', 'Transaction Cost %', min = 0.0, max = 9.9, value = 0.0),
+           actionButton("backTest","Test"),
+           
+           
+           
            br(),
            br(),
-           br(),
-           br()
+           br()#,
+           #tableOutput("BackTest")
            
            )
+#  tabPanel("Help",tableOutput("BackTest"))
   )
+
+ 
+
   )
 )

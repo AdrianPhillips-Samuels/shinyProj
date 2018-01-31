@@ -17,5 +17,6 @@ SP500$Date = as.Date(SP500$Date,"%m/%d/%Y")
 SPxts = xts(SP500[,c('Open','High','Low','Close')], order.by = SP500$Date)
 chartData = SPxts
 SPVxts = xts(SP500[,'Volume'], order.by = SP500$Date)
+
 #print(colnames(SPxts))
 #startDate = min(index(SPxts))
